@@ -5,7 +5,7 @@ let amigos = [];
 function adicionarAmigo() {
     //Captura o valor do campo de entrada
     let entrada = document.getElementById("amigo");
-    let nome = input.value.trim();
+    let nome = entrada.value.trim();
 
     //validação da entrada
     if (nome === "") {
@@ -17,7 +17,7 @@ function adicionarAmigo() {
      amigos.push(nome);
 
      // Limpa o campo de entrada
-    input.value = "";
+    entrada.value = "";
 
     //atualiza a lista de amigos
     atualizarListaAmigos();
