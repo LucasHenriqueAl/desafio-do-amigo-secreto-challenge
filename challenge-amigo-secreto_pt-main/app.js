@@ -18,4 +18,22 @@ function adicionarAmigo() {
 
      // Limpa o campo de entrada
     input.value = "";
+
+    //atualiza a lista de amigos
+    atualizarListaAmigos();
+}
+
+function atualizarListaAmigos() {
+     // Obtém o elemento da lista no HTML
+    let lista = document.getElementById("listaAmigos");
+    
+     // Limpa a lista antes de atualizar para evitar duplicatas
+    lista.innerHTML = "";
+
+     // Percorre o array de amigos e adiciona cada nome como um item na lista
+    amigos.forEach(amigo => {
+        let li = document.createElement("li"); // Cria um novo elemento de lista
+        li.textContent = amigo; // Define o texto do item da lista como o nome do amigo
+        lista.appendChild(li); // Adiciona o item à lista no HTML
+    });
 }
